@@ -24,7 +24,9 @@ def search():
 	print(request.args.get('term'))
 	status = process.searchdoc(request.args.get('term'))
 	return jsonify(
-        status= 200,
+        status= "success",
+        message= "search successful",
+        code= 200,
         data= status
     )
 		   
